@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		.parent1,.parent2{
+			position: relative;
+		}
+		.parent1{
+			width: 300px;
+		}
+		.con1{
+			position: relative;
+			height: 100px;
+			width: 300px;
+			overflow: hidden;
+			background: green;
+			margin-bottom: 50px;
+		}
+		.con2{
+			position: relative;
+			height: 100px;
+			overflow: hidden;
+			background: green;
+		}
+		.hbScroll-wrap{
+		    position: absolute;
+		    width: 50px;
+		    height: 100%;
+		    right: 0;
+		    top: 0;
+		    display: block;
+		    background: blue;
+		}
+		.hbScroll-wrap .hbScroll-silde{
+		    position: absolute;
+		    width: 100%;
+		    height: 30px;
+		    top: 0;
+		    left: 0;
+		    display: block;
+		    background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent1">
+		<div class="con1">dasdas<br>sad</div>
+	</div>
+	
+	<div class="parent2">
+		<div class="con2">dasda<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>s2sad</div>
+	</div>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="hbScrollV2.js"></script>
+<script type="text/javascript">
+	var b = hbScroll('.parent1','.con1',1); //不够高度出现滚动条时，自动隐藏
+	var b = hbScroll('.parent2','.con2',2);
+</script>
+</body>
+</html>
